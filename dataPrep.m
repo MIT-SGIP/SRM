@@ -234,3 +234,9 @@ for i = 1:length(filenames)
     datStore(i, :) = [endTime, avgAccelAx/g, maxMagAx/g, maxMagLat/g];
 
 end
+
+%% Save end times
+
+endTimes = datStore(:,1);
+
+save("ImpactDurations.mat", "endTimes");
